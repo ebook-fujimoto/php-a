@@ -1,0 +1,17 @@
+{
+    "name": "opst-ezaki/php-a",
+    "type": "project",
+    "authors": [
+        {
+            "name": "opst.ezaki",
+            "email": "ezaki.takato@opst.jp"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "OpstEzaki\\PhpA\\": "./"
+        }
+    }
+}

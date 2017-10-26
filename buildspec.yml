@@ -1,0 +1,21 @@
+version: 0.2
+
+env:
+  variables:
+    privilegedMode: true
+
+phases:
+  install:
+    commands:
+      - apt-get update && apt-get install -y php5
+      - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=1.5.2
+  pre_build:
+    commands:
+      - $(aws ecr get-login --region ap-northeast-1)
+  build:
+    commands:
+      - composer install
+      - docker build -t 839550307965.dkr.ecr.ap-northeast-1.amazonaws.com/php-a:latest .
+  post_build:
+    commands:
+      - docker push 839550307965.dkr.ecr.ap-northeast-1.amazonaws.com/php-a:latest
