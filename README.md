@@ -17,6 +17,7 @@ PHP A と PHP B の連携は [PHP B](https://github.com/opst-ezaki/php-b) の re
     - `次のステップ` ボタンクリック
     - `完了` ボタンクリック
   と進むみ、リポジトリを作成する。
+  ページ上部に表示される `リポジトリの URI` の値をコピーしておく（後ほど使用する）
 
 1. [CodeBuild](https://ap-northeast-1.console.aws.amazon.com/codebuild/home?region=ap-northeast-1#/projects) のページから`プロジェクトの作成` ボタンクリックし作成スタート
 
@@ -41,6 +42,8 @@ PHP A と PHP B の連携は [PHP B](https://github.com/opst-ezaki/php-b) の re
     - サービスロール
         - `アカウントでサービスロールを作成`
         - ロール名: `codebuild-php-a-service-role`
+    - 詳細設定
+        - 環境変数: 名前: `REPO_URI`, 値: `{ECS で作成したリポジトリの URI}`, タイプ: `プレーンテキスト`
     以上を設定し、 `続行` -> `保存` をクリック
 1. [IAM](https://console.aws.amazon.com/iam/home?region=ap-northeast-1#/roles) 画面を開き、
     - 左側メニューより `ロール` を選択
