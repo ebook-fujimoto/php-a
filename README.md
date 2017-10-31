@@ -35,8 +35,8 @@ PHP A と PHP B の連携は [PHP B](https://github.com/opst-ezaki/php-b) の re
         - オペレーティングシステム: `Ubuntu`
         - ランタイム: `Docker`
         - バージョン: `aws/codebuild/docker:1.12.1`
-        - ビルド仕様: `ソースコードのルートディレクトリの buildspeck.yml` を使用
-        - buildspeck 名: buildspec.yml (変更なし)
+        - ビルド仕様: `ソースコードのルートディレクトリの buildspec.yml` を使用
+        - buildspec 名: buildspec.yml (変更なし)
     - アーティファクト: 子のビルドプレジェクトからアーティファクトを配置する場所
         - タイプ: `アーティファクトなし`
     - サービスロール
