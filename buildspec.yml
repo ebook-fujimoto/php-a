@@ -19,9 +19,4 @@ phases:
   post_build:
     commands:
       - docker push ${REPO_URI}:latest
-      - echo -e "{\"status\": \"ok\"}" > result.json
-
-artifacts:
-  files:
-    - result.json
 
