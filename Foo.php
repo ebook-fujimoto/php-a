@@ -7,6 +7,6 @@ class Foo
     
     public function doSomething()
     {
-        echo "Hello";
+        echo "Hello!";
     }
 }
